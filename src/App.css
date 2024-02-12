@@ -90,14 +90,14 @@ header .btn1:hover{
 }
 
 .login-container>div{
-  width: 90%;
+  width: 98%;
   margin: auto;
 }
 .login-section2 div{
   width: 100%;
 }
 .login-section2 form{
-  background-color: #FEF287;
+  background-color: #9e4404;
   padding: 20px;
   border-radius: 20px;
 }
