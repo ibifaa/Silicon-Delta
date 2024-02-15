@@ -22,7 +22,8 @@ const Signup = () => {
   const coursesBySchool = {
     'School of Coding': ['MEAN Stack','MERN Stack', 'Web Fullstack Development', 'Mobile App Development', 'PHP Fullstack', 'Frontend Development', 'Backend Development', 'JavaScript Fullstack', 'Python Fullstack', 'Software engineering', 'Robotics/AI', 'Go Fullstack'],
     'School of Design': ['Graphic Design', 'Product Design', 'Motion Design', 'FlutterFlow'],
-    'School of Digital Marketing': ['Marketing Automation', 'Content Writing', 'Visual Content Creation', 'Marketing Ads Campaign']
+    'School of Digital Marketing': ['Marketing Automation', 'Content Writing', 'Visual Content Creation', 'Marketing Ads Campaign'],
+    'Other': ['Cyber Security', 'Data Analytics', 'DevOps Engineering', 'Cloud Engineering', 'Project Mangement']
   };
 
   // Function to handle school selection
@@ -148,7 +149,7 @@ const Signup = () => {
           <option value="School of Coding">School of Coding</option>
           <option value="School of Design">School of Design</option>
           <option value="School of Digital Marketing">School of Digital Marketing</option>
-          <option value="other">Other</option>
+          <option value="Other">Other</option>
         </select>
       </div>
       <div>
