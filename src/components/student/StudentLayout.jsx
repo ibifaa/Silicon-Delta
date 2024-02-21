@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-// import { toast, ToastContainer } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { FaBars, FaBell, FaHome, FaUser, FaUserAlt, FaUserCircle } from 'react-icons/fa'
 
@@ -100,19 +100,31 @@ const StudentLayout = ({ children }) => {
             <img src={testPic} alt="" /> Assignment
           </div>
           </NavLink>
+          <NavLink
+            to="/student/certificates"
+            activeClassName="active"
+            onClick={() => handleNavLinkClick('/student/certificates')}>
           <div className="nav-item">
             <img src={testPic} alt="" /> Certificates
           </div>
+          </NavLink>
+          <NavLink
+            to="/student/profile"
+            activeClassName="active"
+            onClick={() => handleNavLinkClick('/student/profile')}> 
           <div className="nav-item">
-            <img src={settingsPic} alt="" /> Settings
+            <img src={settingsPic} alt="" /> Profile
           </div>
+          </NavLink>
         </nav>
         </div>
        
         <main className="user-main-content">
+          <div className='user-main-wrapper'>
           {children}
-          <footer>Silicon Delta &copy; 2024</footer>
-          {/* <ToastContainer /> */}
+          </div>
+          <footer>Silicon Delta Student Portal &copy; 2024</footer>
+          <ToastContainer />
         </main>
       </div>
       

@@ -1,28 +1,70 @@
-import React from 'react'
+import React, { useState } from 'react'
 import StudentLayout from '../../components/student/StudentLayout'
 import coursePic from "../../assets/Silicon Delta 2.png";
+
+const Tabs = ({ children }) => {
+  const [activeTab, setActiveTab] = useState(0); // Defaulting to the first tab
+
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+  };
+
+  return (
+    <div className="tabs">
+      <div className="tab-buttons">
+        {React.Children.map(children, (child, index) => (
+          <button
+            key={index}
+            className={index === activeTab ? 'active tab-button' : 'tab-button'}
+          
+            onClick={() => handleTabClick(index)}
+          >
+            {child.props.label}
+          </button>
+        ))}
+      </div>
+      <div className="tab-content">
+        {React.Children.toArray(children)[activeTab]}
+      </div>
+    </div>
+  );
+};
+
+const Tab = ({ children }) => {
+  return <div className="tab">{children}</div>;
+};
 
 const StudentCourses = () => {
   return (
     <StudentLayout>
-        <h2>Your Courses</h2>
+        <div className='courses-page'>
+        <h2>Your Courses</h2><br />
 
-        <div className='student-course-page'>
-            <div className='panel-card'>
-                <div className='course-pic'><img src={coursePic} /></div>
-                <div><h2>Foundations of User Experience
+<Tabs>
+<Tab label="All">
+<div className='student-course-page'>
+    <div className='panel-card'>
+        <div className='course-pic'><img src={coursePic} /></div>
+        <div><h2>Foundations of User Experience
 (UI/UX) Design</h2>Joshua Greene</div>
-            </div>
-            <div className='panel-card'>
-                <div className='course-pic'><img src={coursePic} /></div>
-                <div><h2>Foundations of User Experience
+    </div>
+    <div className='panel-card'>
+        <div className='course-pic'><img src={coursePic} /></div>
+        <div><h2>Foundations of User Experience
 (UI/UX) Design</h2>Joshua Greene</div>
-            </div>
-            <div className='panel-card'>
-                <div className='course-pic'><img src={coursePic} /></div>
-                <div><h2>Foundations of User Experience
+    </div>
+    <div className='panel-card'>
+        <div className='course-pic'><img src={coursePic} /></div>
+        <div><h2>Foundations of User Experience
 (UI/UX) Design</h2>Joshua Greene</div>
-            </div>
+    </div>
+</div>
+</Tab>
+<Tab label="Complete"></Tab>
+<Tab label="Favourite"></Tab>
+</Tabs>
+
+
         </div>
     </StudentLayout>
   )

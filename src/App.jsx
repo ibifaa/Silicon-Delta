@@ -8,6 +8,8 @@ import NotFound from "./pages/NotFound";
 import StudentAttendance from "./pages/student/StudentAttendance";
 import StudentCourses from "./pages/student/StudentCourses";
 import StudentAssignments from "./pages/student/StudentAssignments";
+import StudentProfile from "./pages/student/StudentProfile";
+import StudentCertificates from "./pages/student/StudentCertificates";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/student/attendance" element={<StudentAttendance />} />
         <Route path="/student/courses" element={<StudentCourses />} />
         <Route path="/student/assignments" element={<StudentAssignments />} />
+        <Route path="/student/certificates" element={<StudentCertificates />} />
+        <Route path="/student/profile" element={<StudentProfile />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
     </Router>

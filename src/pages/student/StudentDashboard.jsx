@@ -4,14 +4,23 @@ import attendancePic from "../../assets/Attendance.png";
 import coursesPic from "../../assets/School.png";
 import testPic from "../../assets/Test Results.png";
 import settingsPic from "../../assets/Settings.png";
+import studentPic from "../../assets/studentpic1.png";
+import ProgressBar from "../../components/ProgressBar";
 
 const StudentDashboard = () => {
   return (
     <StudentLayout>
-      <div>
-        <h3>Welcome, Student</h3><br />
-      </div>
-      <div className="dashboard-overview">
+      <div className="dashboard-page">
+        <div className="dashboard-panel-card panel-card">
+          <div>
+            <h1>Welcome, student</h1>
+          </div>
+          <div>
+            <img src={studentPic} alt="Student img" />
+          </div>
+        </div><br /><br />
+
+        {/* <div className="dashboard-overview">
         <div className="panel-card ml">
           <center>
             <div>
@@ -62,6 +71,65 @@ const StudentDashboard = () => {
               <p>Settings</p>
             </div>
           </center>
+        </div>
+      </div> */}
+
+        <div className="dashboard-panels">
+          <div className="dashboard-panel">
+            <h2>My Current Course</h2><br />
+            <div className="card">
+              <div><div className="course-pic">
+                <img src={coursesPic} />
+              </div>
+              <div>
+                <h3>Foundations of User Experience </h3>
+                <ProgressBar targetProgress={80} />
+              </div></div>
+              <div>
+                <button>View Course</button>
+              </div>
+            </div>
+            <div className="card">
+              <div><div className="course-pic">
+                <img src={coursesPic} />
+              </div>
+              <div>
+                <h3>Foundations of User Experience </h3>
+                <ProgressBar targetProgress={80} />
+              </div></div>
+              <div>
+                <button>View Course</button>
+              </div>
+            </div>
+          </div>
+
+          <div className="dashboard-panel">
+            <h2>My Assignments</h2><br />
+            <div className="card">
+              <div><div className="course-pic">
+                <img src={coursesPic} />
+              </div>
+              <div>
+                <h3>Design Priciples</h3>
+                <ProgressBar targetProgress={80} />
+              </div></div>
+              <div>
+                <button>View</button>
+              </div>
+            </div>
+            <div className="card">
+              <div><div className="course-pic">
+                <img src={coursesPic} />
+              </div>
+              <div>
+                <h3>Foundations of User Experience</h3>
+                <ProgressBar targetProgress={80} />
+              </div></div>
+              <div>
+                <button>View</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </StudentLayout>
