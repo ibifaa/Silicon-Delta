@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { FaBars, FaBell, FaHome, FaUser, FaUserAlt, FaUserCircle } from 'react-icons/fa'
 
-import sitelogo from "../../assets/Silicon Delta logo2.png";
+import sitelogo from "../../assets/Silicon Delta logo.png";
 import dashboardLogo from "../../assets/dashboard button.png";
 import homePic from "../../assets/Home.png";
 import attendancePic from "../../assets/Attendance.png";

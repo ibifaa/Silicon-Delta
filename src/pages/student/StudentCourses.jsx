@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import StudentLayout from '../../components/student/StudentLayout'
+import React, { useState } from "react";
+import StudentLayout from "../../components/student/StudentLayout";
 import coursePic from "../../assets/Silicon Delta 2.png";
 
 const Tabs = ({ children }) => {
@@ -15,8 +15,7 @@ const Tabs = ({ children }) => {
         {React.Children.map(children, (child, index) => (
           <button
             key={index}
-            className={index === activeTab ? 'active tab-button' : 'tab-button'}
-          
+            className={index === activeTab ? "active tab-button" : "tab-button"}
             onClick={() => handleTabClick(index)}
           >
             {child.props.label}
@@ -37,37 +36,72 @@ const Tab = ({ children }) => {
 const StudentCourses = () => {
   return (
     <StudentLayout>
-        <div className='courses-page'>
-        <h2>Your Courses</h2><br />
+      <div className="courses-page">
+        <h2>Your Courses</h2>
+        <br />
 
-<Tabs>
-<Tab label="All">
-<div className='student-course-page'>
-    <div className='panel-card'>
-        <div className='course-pic'><img src={coursePic} /></div>
-        <div><h2>Foundations of User Experience
-(UI/UX) Design</h2>Joshua Greene</div>
-    </div>
-    <div className='panel-card'>
-        <div className='course-pic'><img src={coursePic} /></div>
-        <div><h2>Foundations of User Experience
-(UI/UX) Design</h2>Joshua Greene</div>
-    </div>
-    <div className='panel-card'>
-        <div className='course-pic'><img src={coursePic} /></div>
-        <div><h2>Foundations of User Experience
-(UI/UX) Design</h2>Joshua Greene</div>
-    </div>
-</div>
-</Tab>
-<Tab label="Complete"></Tab>
-<Tab label="Favourite"></Tab>
-</Tabs>
-
-
-        </div>
+        <Tabs>
+          <Tab label="All">
+            <div className="student-course-page">
+              <div className="panel-card">
+                <div className="course-pic">
+                  <img src={coursePic} />
+                </div>
+                <div>
+                  <h2>Mobile App Design</h2>Joshua
+                  Greene
+                </div>
+              </div>
+              <div className="panel-card">
+                <div className="course-pic">
+                  <img src={coursePic} />
+                </div>
+                <div>
+                  <h2>School Of Coding</h2>Joshua
+                  Greene
+                </div>
+              </div>
+              <div className="panel-card">
+                <div className="course-pic">
+                  <img src={coursePic} />
+                </div>
+                <div>
+                  <h2>School Of Digital Marketing</h2>Joshua
+                  Greene
+                </div>
+              </div>
+            </div>
+          </Tab>
+          <Tab label="Complete">
+          <div className="student-course-page">
+              <div className="panel-card">
+                <div className="course-pic">
+                  <img src={coursePic} />
+                </div>
+                <div>
+                  <h2>Mobile App Design</h2>Joshua
+                  Greene
+                </div>
+              </div>
+            </div>
+          </Tab>
+          <Tab label="Favourite">
+          <div className="student-course-page">
+              <div className="panel-card">
+                <div className="course-pic">
+                  <img src={coursePic} />
+                </div>
+                <div>
+                  <h2>School Of Digital Marketing</h2>Joshua
+                  Greene
+                </div>
+              </div>
+            </div>
+          </Tab>
+        </Tabs>
+      </div>
     </StudentLayout>
-  )
-}
+  );
+};
 
-export default StudentCourses
+export default StudentCourses;

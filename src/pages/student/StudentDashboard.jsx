@@ -82,7 +82,7 @@ const StudentDashboard = () => {
                 <img src={coursesPic} />
               </div>
               <div>
-                <h3>Foundations of User Experience </h3>
+                <p><b>Foundations of User Experience </b></p>
                 <ProgressBar targetProgress={80} />
               </div></div>
               <div>
@@ -94,7 +94,7 @@ const StudentDashboard = () => {
                 <img src={coursesPic} />
               </div>
               <div>
-                <h3>Foundations of User Experience </h3>
+              <p><b>Foundations of User Experience </b></p>
                 <ProgressBar targetProgress={80} />
               </div></div>
               <div>
@@ -110,7 +110,7 @@ const StudentDashboard = () => {
                 <img src={coursesPic} />
               </div>
               <div>
-                <h3>Design Priciples</h3>
+                <p><b>Design Priciples</b></p>
                 <ProgressBar targetProgress={80} />
               </div></div>
               <div>
@@ -122,7 +122,7 @@ const StudentDashboard = () => {
                 <img src={coursesPic} />
               </div>
               <div>
-                <h3>Foundations of User Experience</h3>
+                <p><b>Design Priciples</b></p>
                 <ProgressBar targetProgress={80} />
               </div></div>
               <div>
