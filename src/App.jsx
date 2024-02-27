@@ -19,6 +19,7 @@ import CommunityManagerCommunities from "./pages/community-manager/CommunityMana
 import CommunityManagerSmsManagement from "./pages/community-manager/CommunityManagerSmsManagement";
 import CommunityManagerEmailManagement from "./pages/community-manager/CommunityManagerEmailManagement";
 import CommunityManagerSettings from "./pages/community-manager/CommunityManagerSettings";
+import AdminDashboard from "./pages/admin/AdminDashboard";
 
 function App() {
   return (
@@ -44,6 +45,8 @@ function App() {
         <Route path="/community-manager/sms-management" element={<CommunityManagerSmsManagement />} />
         <Route path="/community-manager/email-management" element={<CommunityManagerEmailManagement />} />
         <Route path="/community-manager/settings" element={<CommunityManagerSettings />} /> 
+
+        <Route path="/admin/dashboard" element={<AdminDashboard />} /> 
 
 
 
