@@ -4,8 +4,10 @@
 
 main{
     margin: auto;
+    background: #F9F9F9F9;
 }
 .acmCardItems{
+    
     gap: 40px;
    display: grid;
    grid-template-columns: repeat(2, 1fr);
