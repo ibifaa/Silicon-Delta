@@ -1,0 +1,166 @@
+.view {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 20px;
+}
+
+.view-title {
+  margin-bottom: 15px;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.community-view-card {
+  background-color: white;
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: ease-in-out 0.5s;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-top: 10px;
+}
+
+.community-view-card:hover {
+  transform: scale(1.03);
+}
+
+.view-card {
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: ease-in-out 0.5s;
+  width: 100%;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.view-card:hover {
+  transform: scale(1.03);
+}
+
+.community-view-card-image {
+  margin: auto;
+}
+
+.view-card-image {
+  width: 100%;
+}
+
+.view-card-image > img {
+  width: 100%;
+}
+
+.view-card-board {
+  background-color: var(--color3);
+  padding: 10px;
+}
+
+.view-card-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.view-card-active {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+  background-color: var(--color4);
+  border-collapse: collapse;
+}
+
+.table-page-title {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color4);
+}
+
+th {
+  color: var(--color5);
+}
+
+th,
+td {
+  padding: 7px;
+  border-bottom: 3px solid var(--color5);
+}
+
+.table-name {
+  color: var(--color-blue);
+}
+
+.table-email {
+  color: var(--color-green);
+}
+
+.table-section {
+  overflow-x: scroll;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: white;
+  border-bottom: 3px solid var(--color5);
+}
+
+.pagination-btns {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.pagination-dropdown {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.pagination-btns > button {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+select {
+  margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .table {
+    width: 1000px;
+  }
+
+  .pagination-controls {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .view {
+    grid-template-columns: 1fr;
+  }
+}

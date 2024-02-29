@@ -1,8 +1,7 @@
 import React from "react";
 import AdminLayout from "../../components/admin/AdminLayout";
 import calanderPic from "../../assets/calander-icon.png";
-import 'react-calendar/dist/Calendar.css';
-
+import "react-calendar/dist/Calendar.css";
 
 import diversityPic from "../../assets/Diversity.png";
 import workspacePic from "../../assets/Workspace.png";

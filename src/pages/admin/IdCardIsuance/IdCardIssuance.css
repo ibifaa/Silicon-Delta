@@ -1,0 +1,20 @@
+.idCardItems{
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.idReg{
+    font-size: 35px;
+    margin-left: 10%;
+    margin-top: 4%;
+ 
+}
+
+@media screen and (max-width:600px) {
+    .idReg{
+        font-size: 30px;
+    }
+    
+}
