@@ -8,11 +8,21 @@
 
 :root {
   /* --secondary-color: #FF730E; */
-  --primary-color: #F92401;
+  --primary-color: #f92401;
   --secondary-color: white;
   --color1: white;
 
   --color2: #ffface;
+
+  --color3: #fcf9f9;
+
+  --color4: #f2f2f2;
+
+  --color5: #828282;
+
+  --color-blue: #0000ff;
+
+  --color-green: #0fa958;
 }
 
 body {
@@ -188,7 +198,7 @@ button {
   backdrop-filter: blur(5px);
 }
 
-.header-logo{
+.header-logo {
   width: 70px;
 }
 
@@ -251,7 +261,6 @@ footer {
   top: 68px;
 }
 
-
 .noAside {
   display: none;
 }
@@ -306,7 +315,7 @@ nav .active {
   .fadeIn {
     animation: fadeInAnimation 0.5s ease-in-out forwards;
   }
-  
+
   @keyframes fadeInAnimation {
     from {
       opacity: 0;
@@ -639,11 +648,11 @@ nav .active {
 
 /* Community Manager Layout */
 
-.userProfile{
+.userProfile {
   cursor: pointer;
 }
 
-.headerNav{
+.headerNav {
   position: fixed;
   background-color: var(--color1);
   border-radius: 10px;
@@ -655,38 +664,57 @@ nav .active {
   top: 70px;
   right: 10px;
 }
-.headerNav img{
+.headerNav img {
   width: 100px;
 }
-.userProfile:hover{
+.userProfile:hover {
   font-weight: bold;
 }
 
-.headerNav .profileItems p{
+.settings-route {
+  display: block;
+}
+
+.headerNav .profileItems p,
+.settings-route {
   background-color: rgb(221, 218, 218);
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 
-.headerNav .profileItems p.red{
-  color:red
+.headerNav .profileItems p.red {
+  color: red;
 }
 
-.headerNav .profileItems p:hover{
-  background-color:orangered;
+.settings-route:hover {
+  background-color: orangered;
   color: white;
 }
 
-.headerNav .profileItems p.red:hover{
-  background-color:red;
-  color: white;
+.settings-page-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 
+.settings-page-buttons > button {
+  border: 1px solid black;
+  width: 180px;
+  padding: 10px 0;
+}
+
+.profile-image {
+  border-radius: 50%;
+}
+
+.headerNav .profileItems p.red:hover {
+  background-color: red;
+  color: white;
+}
 
 .cmlayout {
   background-color: rgb(238, 235, 235);
-
 }
 
 .cmlayout header {
@@ -714,25 +742,25 @@ nav .active {
   color: var(--primary-color);
 }
 
-.cmlayout .panel-card{
+.cmlayout .panel-card {
   margin-bottom: 20px;
 }
 
-.cmlayout .panel-card p{
+.cmlayout .panel-card p {
   margin-bottom: 10px;
 }
 
-.event-card{
+.event-card {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
 }
 
-.event-card img{
+.event-card img {
   margin-right: 10px;
 }
 
-.red-dot{
+.red-dot {
   height: 10px;
   width: 10px;
   background-color: red;
@@ -742,9 +770,8 @@ nav .active {
   margin-right: 10px;
 }
 
-
 @media screen and (min-width: 700px) {
-  .cmlayout .overview-cards{
+  .cmlayout .overview-cards {
     display: grid;
     grid-template-columns: 48% 48%;
     gap: 4%;
@@ -752,10 +779,10 @@ nav .active {
 }
 
 @media screen and (min-width: 700px) {
-  .panel-sections{
+  .panel-sections {
     display: grid;
     grid-template-columns: 60% 38%;
-      gap: 2%;
+    gap: 2%;
   }
 }
 
@@ -788,7 +815,7 @@ nav .active {
   margin-left: 10px;
 }
 
-.search-icon:hover{
+.search-icon:hover {
   background-color: #f0f0f0;
   cursor: pointer;
 }
@@ -824,4 +851,3 @@ nav .active {
     font-size: 14px;
   }
 }
-
