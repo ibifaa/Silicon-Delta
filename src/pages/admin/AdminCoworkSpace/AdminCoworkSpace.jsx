@@ -2,7 +2,7 @@ import React from "react";
 import "./AdminCoworkSpace.css";
 import Navbar from "../../../components/navbar/Navbar";
 import SmallAside from "../../../components/aside/SmallAside";
-import Form from "../../../components/form/Form";
+import Form from "../../../components/form/RegistrationForm";
 
 function AdminCoworkSpace() {
   return (

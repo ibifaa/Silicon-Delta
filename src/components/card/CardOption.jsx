@@ -10,7 +10,7 @@ function CardOption({ image, title, icon }) {
         </div>
 
         <div className="footer-section flex">
-          <img src={icon} alt="icon" />
+          {icon && <img src={icon} alt="icon" />}
           <p>{title}</p>
         </div>
       </div>

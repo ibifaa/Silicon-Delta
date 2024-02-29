@@ -24,6 +24,7 @@ import AdminRegistration from "./pages/admin/AdminReg/AdminRegistration";
 import AdminStudentRegistration from "./pages/admin/AdminStudentReg/AdminStudentRegistration";
 import IdCardIssuance from "./pages/admin/IdCardIsuance/IdCardIssuance";
 import AdminCoworkSpace from "./pages/admin/AdminCoworkSpace/AdminCoworkSpace";
+import AdminClassManagment from "./pages/admin/AdminClassManagement/AdminClassManagement";
 
 function App() {
   return (
@@ -80,6 +81,11 @@ function App() {
         <Route
           path="/admin/cowork-space-registration"
           element={<AdminCoworkSpace />}
+        />
+
+        <Route
+          path="/admin/class-management"
+          element={<AdminClassManagment />}
         />
 
         {/* others */}
