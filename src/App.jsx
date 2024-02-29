@@ -18,7 +18,13 @@ import CommunityManagerCommunities from "./pages/community-manager/CommunityMana
 import CommunityManagerSmsManagement from "./pages/community-manager/CommunityManagerSmsManagement";
 import CommunityManagerEmailManagement from "./pages/community-manager/CommunityManagerEmailManagement";
 import CommunityManagerSettings from "./pages/community-manager/CommunityManagerSettings";
+
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminRegistration from "./pages/admin/AdminReg/AdminRegistration";
+import AdminStudentRegistration from "./pages/admin/AdminStudentReg/AdminStudentRegistration";
+import IdCardIssuance from "./pages/admin/IdCardIsuance/IdCardIssuance";
+import AdminCoworkSpace from "./pages/admin/AdminCoworkSpace/AdminCoworkSpace";
+import AdminClassManagment from "./pages/admin/AdminClassManagement/AdminClassManagement";
 import TablePage from "./pages/community-manager/TablePage";
 
 function App() {
@@ -63,6 +69,25 @@ function App() {
           element={<CommunityManagerSettings />}
         />
 
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/registration" element={<AdminRegistration />} />
+
+        <Route
+          path="/admin/student-registration"
+          element={<AdminStudentRegistration />}
+        />
+
+        <Route path="/admin/id-card-issuance" element={<IdCardIssuance />} />
+
+        <Route
+          path="/admin/cowork-space-registration"
+          element={<AdminCoworkSpace />}
+        />
+
+        <Route
+          path="/admin/class-management"
+          element={<AdminClassManagment />}
+        />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
 
         <Route

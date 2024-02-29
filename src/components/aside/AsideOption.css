@@ -1,0 +1,15 @@
+.flex{
+    display: flex;
+}
+
+.aside-items{
+    align-items: center;
+    justify-content: left;
+   gap: 5px;
+}
+
+.small-aside-items{
+    align-items: center;
+    justify-content: center;
+   gap: 5px;
+}

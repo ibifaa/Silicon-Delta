@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+
+main{
+    margin: auto;
+    background: #F9F9F9F9;
+}
+.acmCardItems{
+    
+    gap: 40px;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   width: 100%;
+   padding: 20px;
+}
+.acmContent{
+    margin: auto;
+}
+
+.acmTitle{
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: "cursive";
+}

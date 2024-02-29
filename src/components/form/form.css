@@ -1,0 +1,53 @@
+.form-content{
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    width: 40%;
+}
+
+@media screen and (max-width:600px) {
+    .form-content{
+        
+        width: 100%;
+        margin: auto;
+        padding-right: 10px;
+    }
+    
+    
+}
+
+form{
+    font-size: 0;
+    padding-right:30px ;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px;
+    
+}
+
+@media screen and (max-width:600px) {
+
+    form{
+        padding: 10px;
+        margin: auto;
+       
+    }
+}
+
+input{
+    margin: 10px 0px;
+}
+
+select{
+    margin: 10px;
+    color: black;
+}
+
+.submit{
+    background-color: #F90101;
+    font-size: 1.5rem;
+    color: white;
+}
+
+::placeholder{
+    color: black;
+}
