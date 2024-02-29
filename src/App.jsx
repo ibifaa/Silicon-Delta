@@ -12,14 +12,18 @@ import StudentAssignments from "./pages/student/StudentAssignments";
 import StudentProfile from "./pages/student/StudentProfile";
 import StudentCertificates from "./pages/student/StudentCertificates";
 
-
 import CommunityManagerDashboard from "./pages/community-manager/CommunityManagerDashboard";
 import CommunityManagerReports from "./pages/community-manager/CommunityManagerReports";
 import CommunityManagerCommunities from "./pages/community-manager/CommunityManagerCommunities";
 import CommunityManagerSmsManagement from "./pages/community-manager/CommunityManagerSmsManagement";
 import CommunityManagerEmailManagement from "./pages/community-manager/CommunityManagerEmailManagement";
 import CommunityManagerSettings from "./pages/community-manager/CommunityManagerSettings";
+
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminRegistration from "./pages/admin/AdminReg/AdminRegistration";
+import AdminStudentRegistration from "./pages/admin/AdminStudentReg/AdminStudentRegistration";
+import IdCardIssuance from "./pages/admin/IdCardIsuance/IdCardIssuance";
+import AdminCoworkSpace from "./pages/admin/AdminCoworkSpace/AdminCoworkSpace";
 
 function App() {
   return (
@@ -37,18 +41,46 @@ function App() {
         <Route path="/student/certificates" element={<StudentCertificates />} />
         <Route path="/student/profile" element={<StudentProfile />} />
 
-
         {/* community manager */}
-        <Route path="/community-manager/dashboard" element={<CommunityManagerDashboard />} />
-        <Route path="/community-manager/reports" element={<CommunityManagerReports />} />
-        <Route path="/community-manager/communities" element={<CommunityManagerCommunities />} />
-        <Route path="/community-manager/sms-management" element={<CommunityManagerSmsManagement />} />
-        <Route path="/community-manager/email-management" element={<CommunityManagerEmailManagement />} />
-        <Route path="/community-manager/settings" element={<CommunityManagerSettings />} /> 
+        <Route
+          path="/community-manager/dashboard"
+          element={<CommunityManagerDashboard />}
+        />
+        <Route
+          path="/community-manager/reports"
+          element={<CommunityManagerReports />}
+        />
+        <Route
+          path="/community-manager/communities"
+          element={<CommunityManagerCommunities />}
+        />
+        <Route
+          path="/community-manager/sms-management"
+          element={<CommunityManagerSmsManagement />}
+        />
+        <Route
+          path="/community-manager/email-management"
+          element={<CommunityManagerEmailManagement />}
+        />
+        <Route
+          path="/community-manager/settings"
+          element={<CommunityManagerSettings />}
+        />
 
-        <Route path="/admin/dashboard" element={<AdminDashboard />} /> 
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/registration" element={<AdminRegistration />} />
 
+        <Route
+          path="/admin/student-registration"
+          element={<AdminStudentRegistration />}
+        />
 
+        <Route path="/admin/id-card-issuance" element={<IdCardIssuance />} />
+
+        <Route
+          path="/admin/cowork-space-registration"
+          element={<AdminCoworkSpace />}
+        />
 
         {/* others */}
         <Route path="/*" element={<NotFound />} />

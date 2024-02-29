@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+.adminReg{
+        font-family: "Poppins";
+     
+}
+
+.content{
+   margin: 3% auto;
+}
+
+.reg{
+    font-size: 30px;
+    font-family: "Poppins";
+    margin: 5px;
+}
+
+
+.cardItems{
+    margin: 3% auto;
+    gap: 5%;
+    /* width: 90%; */
+}
+
+main{
+    margin: auto;
+}
+
+
+
+@media screen and (max-width:600px) {
+    .cardItems{
+        flex-direction: column;
+        row-gap: 30px;
+        margin: 10px auto;
+    }
+}

@@ -1,0 +1,45 @@
+.flex{
+    display: flex;
+}
+
+.footer-section {
+    gap: 10px;
+    align-items: center;
+    justify-content: left;
+    padding: 15px;
+
+}
+
+.image-section{
+width: 100%;
+}
+
+@media screen and (max-width:600px) {
+    .footer-section {
+      justify-content: center;
+    
+    }
+}
+
+.regCard{
+    box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+}
+
+
+.cardImg{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: contain;
+}
+
+@media screen and (max-width:600px) {
+.cardImg{
+    
+}
+
+.regCard{
+
+}
+
+}
