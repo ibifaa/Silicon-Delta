@@ -25,6 +25,7 @@ import AdminStudentRegistration from "./pages/admin/AdminStudentReg/AdminStudent
 import IdCardIssuance from "./pages/admin/IdCardIsuance/IdCardIssuance";
 import AdminCoworkSpace from "./pages/admin/AdminCoworkSpace/AdminCoworkSpace";
 import AdminClassManagment from "./pages/admin/AdminClassManagement/AdminClassManagement";
+import TablePage from "./pages/community-manager/TablePage";
 
 function App() {
   return (
@@ -86,6 +87,43 @@ function App() {
         <Route
           path="/admin/class-management"
           element={<AdminClassManagment />}
+        />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+
+        <Route
+          path="/community-manager/dashboard"
+          element={<CommunityManagerDashboard />}
+        />
+        <Route
+          path="/community-manager/reports"
+          element={<CommunityManagerReports />}
+        />
+        <Route
+          path="/community-manager/communities"
+          element={<CommunityManagerCommunities />}
+        />
+        <Route
+          path="/community-manager/sms-management"
+          element={<CommunityManagerSmsManagement />}
+        />
+        <Route
+          path="/community-manager/sms-management/:type"
+          element={<TablePage />}
+        />
+
+        <Route
+          path="/community-manager/email-management"
+          element={<CommunityManagerEmailManagement />}
+        />
+
+        <Route
+          path="/community-manager/email-management/:type"
+          element={<TablePage />}
+        />
+
+        <Route
+          path="/community-manager/settings"
+          element={<CommunityManagerSettings />}
         />
 
         {/* others */}

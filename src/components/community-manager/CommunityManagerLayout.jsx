@@ -22,7 +22,6 @@ import communitiesPic from "../../assets/community-icon.png";
 import messagesPic from "../../assets/messages-icon.png";
 import emailPic from "../../assets/email-icon.png";
 
-
 import { Link, NavLink } from "react-router-dom";
 
 const CommunityManagerLayout = ({ children }) => {
@@ -59,7 +58,7 @@ const CommunityManagerLayout = ({ children }) => {
 
   const [activeLink, setActiveLink] = useState("");
 
-  const handleNavLinkClick = (link) => { 
+  const handleNavLinkClick = (link) => {
     setActiveLink(link);
   };
 
@@ -70,31 +69,41 @@ const CommunityManagerLayout = ({ children }) => {
         <img src={sitelogo} alt="" className="header-logo" />
         <div className="header-aside">
           <FaBell className="header-icon"></FaBell>
-          <FaUserCircle className="header-icon" />&emsp; 
-          <span className="userProfile" onClick={toggleProfile}>ImaChrist Davies</span>
+          <FaUserCircle className="header-icon" />
+          &emsp;
+          <span className="userProfile" onClick={toggleProfile}>
+            ImaChrist Davies
+          </span>
           <FaBars onClick={toggleAside} className="headerToggleIcon" />
-          
         </div>
       </header>
       {isProfileVisible && (
-     <div className="headerNav">
-     <center>
-     <img src={profilelogo} alt="" />
-     <h3>ImaChrist Davies</h3>
-     <p>Community Manager</p>
-     <p>Imachristt328@gmail.com</p>
-     </center><br /><hr /><br />
-     <div className="profileItems">
-       <p><FaCog/>&ensp; Settings</p>
-       <p className="red"><FaSignOutAlt/>&ensp; Log Out</p>
-     </div>
-     </div>
+        <div className="headerNav">
+          <center>
+            <img src={profilelogo} alt="" />
+            <h3>ImaChrist Davies</h3>
+            <p>Community Manager</p>
+            <p>Imachristt328@gmail.com</p>
+          </center>
+          <br />
+          <hr />
+          <br />
+          <div className="profileItems">
+            <Link to="/community-manager/settings" className="settings-route">
+              <FaCog />
+              &ensp; Settings
+            </Link>
+            <p className="red">
+              <FaSignOutAlt />
+              &ensp; Log Out
+            </p>
+          </div>
+        </div>
       )}
- 
+
       <div className="user-content-wrapper">
         <div className={asideClass}>
           <nav>
-
             <NavLink
               to="/community-manager/dashboard"
               activeClassName="active"
@@ -117,7 +126,9 @@ const CommunityManagerLayout = ({ children }) => {
             <NavLink
               to="/community-manager/communities"
               activeClassName="active"
-              onClick={() => handleNavLinkClick("/community-manager/communities")}
+              onClick={() =>
+                handleNavLinkClick("/community-manager/communities")
+              }
             >
               <div className="nav-item">
                 <img src={communitiesPic} alt="" /> Communities
@@ -126,7 +137,9 @@ const CommunityManagerLayout = ({ children }) => {
             <NavLink
               to="/community-manager/sms-management"
               activeClassName="active"
-              onClick={() => handleNavLinkClick("/community-manager/sms-management")}
+              onClick={() =>
+                handleNavLinkClick("/community-manager/sms-management")
+              }
             >
               <div className="nav-item">
                 <img src={messagesPic} alt="" /> Sms Management
@@ -135,7 +148,9 @@ const CommunityManagerLayout = ({ children }) => {
             <NavLink
               to="/community-manager/email-management"
               activeClassName="active"
-              onClick={() => handleNavLinkClick("/community-manager/email-management")}
+              onClick={() =>
+                handleNavLinkClick("/community-manager/email-management")
+              }
             >
               <div className="nav-item">
                 <img src={emailPic} alt="" /> Email Management
