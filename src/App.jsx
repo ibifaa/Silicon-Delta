@@ -20,6 +20,8 @@ import CommunityManagerSmsManagement from "./pages/community-manager/CommunityMa
 import CommunityManagerEmailManagement from "./pages/community-manager/CommunityManagerEmailManagement";
 import CommunityManagerSettings from "./pages/community-manager/CommunityManagerSettings";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminCourses from "./pages/admin/AdminCourses";
+import AdminCertications from "./pages/admin/AdminCertications";
 
 function App() {
   return (
@@ -47,6 +49,8 @@ function App() {
         <Route path="/community-manager/settings" element={<CommunityManagerSettings />} /> 
 
         <Route path="/admin/dashboard" element={<AdminDashboard />} /> 
+        <Route path="/admin/exam-and-certifications" element={<AdminCertications />} /> 
+        <Route path="/admin/courses" element={<AdminCourses />} /> 
 
 
 

@@ -473,6 +473,12 @@ nav .active {
   .ml {
     margin-right: 10%;
   }
+
+  .grid-cards {
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    gap: 2%;
+  }
 }
 
 /* Student Attendance Page */
@@ -825,3 +831,23 @@ nav .active {
   }
 }
 
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+.flex img{
+  margin-right: 10px;
+}
+
+/* admin courses */
+.admin-courses .panel-card{
+  padding: 0;
+}
+.admin-courses .panel-card .sub-card{
+  padding: 20px;
+}
+.admin-courses .panel-card img{
+  width: 100%;
+}

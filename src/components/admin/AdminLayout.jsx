@@ -71,7 +71,7 @@ const AdminLayout = ({ children }) => {
         <div className="header-aside">
           <FaBell className="header-icon"></FaBell>
           <FaUserCircle className="header-icon" />&emsp; 
-          <span className="userProfile" onClick={toggleProfile}>ImaChrist Davies</span>
+          <span className="userProfile" onClick={toggleProfile}>Cynthia Damian-Ekom</span>
           <FaBars onClick={toggleAside} className="headerToggleIcon" />
           
         </div>
@@ -80,9 +80,9 @@ const AdminLayout = ({ children }) => {
      <div className="headerNav">
      <center>
      <img src={profilelogo} alt="" />
-     <h3>ImaChrist Davies</h3>
+     <h3>Cynthia Damian-Ekom</h3>
      <p>Community Manager</p>
-     <p>Imachristt328@gmail.com</p>
+     <p>Cynthia Damian-Ekom@gmail.com</p>
      </center><br /><hr /><br />
      <div className="profileItems">
        <p><FaCog/>&ensp; Settings</p>
@@ -108,40 +108,52 @@ const AdminLayout = ({ children }) => {
             <NavLink
               to="/community-manager/reports"
               activeClassName="active"
-              onClick={() => handleNavLinkClick("/community-manager/reports")}
+              onClick={() => handleNavLinkClick("/admin/registration")}
             >
               <div className="nav-item">
-                <img src={reportsPic} alt="" /> Reports
+                <img src={reportsPic} alt="" /> Registration
               </div>
             </NavLink>
             <NavLink
               to="/community-manager/communities"
               activeClassName="active"
-              onClick={() => handleNavLinkClick("/community-manager/communities")}
+              onClick={() => handleNavLinkClick("/admin/id-issuance")}
             >
               <div className="nav-item">
-                <img src={communitiesPic} alt="" /> Communities
+                <img src={communitiesPic} alt="" /> ID Issuance
               </div>
             </NavLink>
             <NavLink
-              to="/community-manager/sms-management"
+              to="/community-manager/communities"
               activeClassName="active"
-              onClick={() => handleNavLinkClick("/community-manager/sms-management")}
+              onClick={() => handleNavLinkClick("/admin/id-issuance")}
             >
               <div className="nav-item">
-                <img src={messagesPic} alt="" /> Sms Management
+                <img src={communitiesPic} alt="" /> Class management
               </div>
             </NavLink>
+
+            
             <NavLink
-              to="/community-manager/email-management"
+              to="/admin/courses"
               activeClassName="active"
-              onClick={() => handleNavLinkClick("/community-manager/email-management")}
+              onClick={() => handleNavLinkClick("/admin/courses")}
             >
               <div className="nav-item">
-                <img src={emailPic} alt="" /> Email Management
+                <img src={messagesPic} alt="" /> Course Update
               </div>
             </NavLink>
             <NavLink
+              to="/admin/exam-and-certifications"
+              activeClassName="active"
+              onClick={() => handleNavLinkClick("/admin/exam-and-certifications")}
+            >
+              <div className="nav-item">
+                <img src={emailPic} alt="" /> Examinations and 
+certifications
+              </div>
+            </NavLink>
+            {/* <NavLink
               to="/community-manager/settings"
               activeClassName="active"
               onClick={() => handleNavLinkClick("/community-manager/settings")}
@@ -149,7 +161,7 @@ const AdminLayout = ({ children }) => {
               <div className="nav-item">
                 <FaCog /> Settings
               </div>
-            </NavLink>
+            </NavLink> */}
           </nav>
         </div>
 
