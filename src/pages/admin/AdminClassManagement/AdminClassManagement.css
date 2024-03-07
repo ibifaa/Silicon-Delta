@@ -20,7 +20,113 @@ main{
 
 .acmTitle{
     font-size: 35px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    margin-left: 20px;
     font-size: "cursive";
+}
+
+/* Attendance Management */
+.heading{
+    justify-content: space-between;
+}
+.attendanceMain{
+    margin-top: 30px;
+    width: 100%;
+    padding: 30px;
+    flex-direction: column;
+}
+.attendanceTable {
+    width: 100%;
+}
+
+.tableTitle{
+    width: 100%;
+}
+
+.title{
+    font-size: 2rem;
+}
+
+.subTitle{
+    font-size: 1.5rem;
+}
+
+.chartSection{
+    margin-top: 30px;
+    justify-content:flex-start;
+    align-items: left;
+}
+
+.button-section{
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.button-section button{
+    padding: 2px 20px;
+    border-radius: 10px;
+    color: black;
+}
+
+.box1{
+   background: #F5C4C4;
+   gap: 10px;
+    
+}
+
+.box2{
+    background-color: #C3E9D5;
+    gap: 10px;
+}
+
+.circle{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+
+.circle1, .red{
+    background: #CA0E0E;
+}
+
+ .red{
+    background: #F5C4C4;
+
+    color: #CA0E0E;
+    };
+
+
+.circle2{
+    background: #0FA958;
+
+}
+
+ .green{
+    background: #C3E9D5;
+
+    color: #0FA958;
+
+}
+
+.status{
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin: 5px;
+    width: 200px;
+    font-size: 10px;
+}
+
+.tableHeading{
+    justify-content: space-between;
+}
+.tableHeading h4{
+    font-size: 1rem;
+}
+
+.tableHeading input, select{
+   width: 20%;
+}
+.sub-section{
+    justify-content: space-around;
 }

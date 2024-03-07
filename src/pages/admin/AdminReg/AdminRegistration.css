@@ -1,38 +1,50 @@
 *{
     box-sizing: border-box;
 }
-.adminReg{
-        font-family: "Poppins";
-     
-}
-
-.content{
-   margin: 3% auto;
-}
-
-.reg{
-    font-size: 30px;
-    font-family: "Poppins";
-    margin: 5px;
-}
-
-
-.cardItems{
-    margin: 3% auto;
-    gap: 5%;
-    /* width: 90%; */
-}
-
-main{
+/* .RegContent{
     margin: auto;
+    width: 100%;
+
+} */
+
+
+.regTitle{
+    font-size: 35px;
+    font-family: "Poppins";
+   margin-top: 80px;
+   margin-bottom: 20px;
+   text-align: left;
+ 
 }
 
+.regCardItems{
+    margin-top: 50px;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 40px;
+     margin:20px auto;
+     position: relative;
+  
+}
 
 
 @media screen and (max-width:600px) {
-    .cardItems{
-        flex-direction: column;
-        row-gap: 30px;
-        margin: 10px auto;
+    .regCardItems{
+        grid-template-columns: 1fr;
+        /* row-gap: 30px; */
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        /* margin: 10px auto; */
+        width: 100%;
+      
     }
+
+    .regTitle{
+        font-size: 30px;
+        margin: 20px 5%;
+    }
+
+    
+
 }

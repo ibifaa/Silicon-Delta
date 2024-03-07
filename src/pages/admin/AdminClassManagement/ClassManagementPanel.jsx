@@ -1,11 +1,11 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import Navbar from "../../../components/navbar/Navbar";
 import SmallAside from "../../../components/aside/SmallAside";
 import Form from "../../../components/form/RegistrationForm";
 
-import "./AdminStudentsRegistration.css";
-
-function AdminStudentRegistration() {
+function ClassManagementPanel() {
+  let { title } = useParams();
   return (
     <div>
       <div className="asr-navbar">
@@ -20,7 +20,7 @@ function AdminStudentRegistration() {
             <h2>Silicon Delta</h2>
             <p>INNOVATION HUB</p>
 
-            <h4>Students Registration</h4>
+            <h4>{title}</h4>
           </div>
 
           <Form />
@@ -30,4 +30,4 @@ function AdminStudentRegistration() {
   );
 }
 
-export default AdminStudentRegistration;
+export default ClassManagementPanel;

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Navbar from "../../../components/navbar/Navbar";
 import Aside from "../../../components/aside/Aside";
@@ -18,37 +19,53 @@ import adminRegIcon from "../../../assets/AdminRegImg/Client.svg";
 import "./IdCardIssuance.css";
 
 import CardOption from "../../../components/card/CardOption";
+import NewAdminLayout from "../../../components/admin/NewAdminLayout";
 
 function IdCardIssuance() {
+  const [selectedTitle, setSelectedTitle] = useState("");
+
+  const handleCardClick = (title) => {
+    setSelectedTitle(title);
+  };
+
+  const cardOptions = [
+    {
+      icon: studentRegIcon,
+      title: "Student ID",
+      image: window.innerWidth <= 600 ? image1 : image1Bg,
+    },
+    {
+      icon: clientRegIcon,
+      title: "Staff ID",
+      image: window.innerWidth <= 600 ? image2 : image2Bg,
+    },
+    {
+      icon: adminRegIcon,
+      title: "Client ID",
+      image: window.innerWidth <= 600 ? image3 : image3Bg,
+    },
+  ];
+
   return (
-    <div>
-      <Navbar />
-      <main className="flex">
-        <Aside />
-        <div className="ici-content">
-          <h3 className="idReg">ID Issuance </h3>
-
-          <div className="flex idCardItems">
+    <NewAdminLayout>
+      <h3 className="idReg">ID Card Issuance</h3>
+      <div className="idCardItems flex">
+        {cardOptions.map((item, index) => (
+          <Link
+            key={index}
+            to={`/admin/card-issuance/${encodeURIComponent(item.title)}`}
+            className="card"
+            onClick={() => handleCardClick(item.title)}
+          >
             <CardOption
-              image={window.innerWidth <= 600 ? image1 : image1Bg}
-              icon={studentRegIcon}
-              title={"Students Registration"}
+              icon={item.icon}
+              image={item.image}
+              title={item.title}
             />
-            <CardOption
-              image={window.innerWidth <= 600 ? image2 : image2Bg}
-              icon={clientRegIcon}
-              title={"Registration of Clients"}
-            />
-
-            <CardOption
-              image={window.innerWidth <= 600 ? image3 : image3Bg}
-              icon={adminRegIcon}
-              title={"Registration of Clients"}
-            />
-          </div>
-        </div>
-      </main>
-    </div>
+          </Link>
+        ))}
+      </div>
+    </NewAdminLayout>
   );
 }
 

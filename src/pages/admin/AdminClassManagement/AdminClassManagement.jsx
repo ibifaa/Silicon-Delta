@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Navbar from "../../../components/navbar/Navbar";
 import Aside from "../../../components/aside/Aside";
@@ -15,56 +16,65 @@ import image3Bg from "../../../assets/AdminRegImg/image2bg.png";
 import image4 from "../../../assets/AdminRegImg/image7.png";
 import image4Bg from "../../../assets/AdminRegImg/image7bg.png";
 
-import "./AdminClassManagement.css";
-import "../AdminReg/AdminRegistration.css";
 import CardOption from "../../../components/card/CardOption";
+import NewAdminLayout from "../../../components/admin/NewAdminLayout";
 
 function AdminClassManagement() {
+  const [selectedTitle, setSelectedTitle] = useState("");
+
+  const handleCardClick = (title) => {
+    setSelectedTitle(title);
+  };
+
+  const cardOptions = [
+    {
+      icon: "",
+      title: "School of Coding",
+      image: window.innerWidth <= 600 ? image1 : image1Bg,
+    },
+    {
+      icon: "",
+      title: "School of Design",
+      image: window.innerWidth <= 600 ? image2 : image2Bg,
+    },
+    {
+      icon: "",
+      title: "School of Digital Marketing",
+      image: window.innerWidth <= 600 ? image3 : image3Bg,
+    },
+    {
+      icon: "",
+      title: "Attendance",
+      image: window.innerWidth <= 600 ? image4 : image4Bg,
+    },
+  ];
+
   return (
-    <div className="adminReg">
-      <Navbar />
-
-      <main className="flex">
-        <Aside />
-        <div className="acmContent">
-          <h3 className="acmTitle">Class Management</h3>
-
-          <div className="acmCardItems flex">
-            <div className="card">
-              <CardOption
-                icon={null}
-                title={"School of Coding Biodata"}
-                image={window.innerWidth <= 600 ? image1 : image1Bg}
-              />
-            </div>
-
-            <div className="card">
-              <CardOption
-                icon={null}
-                title={"School of Design Biodata"}
-                image={window.innerWidth <= 600 ? image2 : image2Bg}
-              />
-            </div>
-
-            <div className="card">
-              <CardOption
-                icon={null}
-                title={"School of Digital Marketing Biodata"}
-                image={window.innerWidth <= 600 ? image3 : image3Bg}
-              />
-            </div>
-
-            <div className="card">
-              <CardOption
-                icon={null}
-                title={"Attendance for all schools"}
-                image={window.innerWidth <= 600 ? image4 : image4Bg}
-              />
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
+    <NewAdminLayout>
+      <h3 className="acmTitle">Class Management</h3>
+      <div className="acmCardItems flex">
+        {cardOptions.map((item, index) => (
+          <Link
+            key={index}
+            to={
+              index <= 2
+                ? `/admin/class-management/${encodeURIComponent(item.title)}`
+                : index === 3
+                ? `/admin/class-attendance/${encodeURIComponent(item.title)}`
+                : ""
+            }
+            className="card"
+            onClick={() => handleCardClick(item.title)}
+          >
+            <CardOption
+              icon={item.icon}
+              image={item.image}
+              title={item.title}
+            />
+          </Link>
+        ))}
+      </div>
+    </NewAdminLayout>
   );
 }
 

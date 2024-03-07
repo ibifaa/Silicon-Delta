@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.userCard{
+    display: flex;
+    flex-direction: column;
+
+}
+.name-section{
+    padding: 10px;
+    text-align: center;
+}
+
+.userCard h4{
+    font-size: 10px
+}
+
+.name-section p{
+    font-size: 8px;
+}
+
+.footer-section{
+    text-align: left;
+}
+
+.footer-section h4{
+    margin-bottom: 10px;
+}
+
+.logo-section{
+    display: none;
+}
+
+.logo-section img{
+    width: 80%;
+}
+
+.subLogo{
+    position: absolute;
+    bottom: 20px;
+    right: 5px;
+}
+
+.subLogo h4{
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.subLogo p{
+    font-size: 8px;
+}
+
+.red{
+    color: red;
+}
+
+@media screen and (max-width:600px) {
+    .logo-section{
+        display: block;
+    }
+}
+
+/* UserCard2 */
+.icon-section{
+    justify-content: space-between;
+}
+
+/* UserCard3 */
+
+.userCardForm{
+ padding: 10px;
+ box-shadow: none;
+}
+
+input{
+   margin: 5px;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+}
+
+.submit{
+    background: #EA0C0C;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+
+}

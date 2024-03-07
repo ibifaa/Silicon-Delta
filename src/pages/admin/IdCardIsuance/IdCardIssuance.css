@@ -1,14 +1,17 @@
 .idCardItems{
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
+    margin-top: 50px;
+    gap: 40px;
+    margin:20px auto;
+    position: relative;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
 }
 
 .idReg{
     font-size: 35px;
-    margin-left: 10%;
-    margin-top: 4%;
+    margin-left: 5%;
+    margin-top: 80px;
  
 }
 

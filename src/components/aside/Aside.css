@@ -3,56 +3,90 @@
 .regAside{
     background-color: #000000;
     color: white;
-    width: 15%;
     padding-top: 20px;
     justify-content: space-between;
-   
+    display: flex;
+    flex-direction: column;
+
+  transition: transform 0.3s ease, opacity 0.3s ease; 
+  transform: translateX(-100%);
+  position: fixed; 
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 98; 
+  overflow-y: hidden;
+  opacity: 0; 
+  pointer-events: none; 
+  width: 16.7%;
+  
+
+
 }
+
+.regAside.visible {
+    transform: translateX(0);
+    opacity: 1; 
+    pointer-events: auto;
+  } 
+
+  @media only screen and (min-width: 768px) {
+    .regAside {
+      transition: transform 0.3s ease;
+      transform: translateX(0);
+      position: fixed; 
+      /* top: 50px; */
+      left: 0;
+      bottom: 0;
+      z-index: 90; 
+      margin-top: 30px;
+      overflow-y: hidden; 
+    
+    }
+  }
 
 @media screen and (max-width:600px) {
     
     .regAside{
-     display: none;
+    width: 92%;
        
     }
 }
 
-.smregAside{
-    background-color: #000000;
+.smAside{
+  
     color: white;
-    width: 5%;
     padding: 10% 10px;
+    padding-top: 50%;
     justify-content: center;
    
 }
 
-@media screen and (max-width:600px) {
-    .smregAside{
-    display: none;
-       
-    }
-}
-
-
-
 
 
 .left-side{
-    width:10%;
+    /* width:10%; */
     text-align:center;
 }
 
 .top-section{
     flex-direction: column;
-    row-gap: 30px;
-    padding: 10px;
-    padding-top: 30px;
+  
+    
+} 
+
+.top-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    padding-top: 50px;
     
 }
 .sm-section{
     flex-direction: column;
-    row-gap: 30px;
-    padding: 10px;
+    row-gap: 60px;
+    padding: 5px;
     padding-top: 30px;
 }
 
@@ -75,4 +109,7 @@
     /* background-color: white; */
 }
 
-
+/* Links */
+.link{
+    color: white;
+}

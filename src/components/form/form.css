@@ -3,11 +3,13 @@
     padding: 20px;
     margin: 20px;
     width: 40%;
+    margin-top: 10%;
 }
 
 @media screen and (max-width:600px) {
     .form-content{
         
+       
         width: 100%;
         margin: auto;
         padding-right: 10px;

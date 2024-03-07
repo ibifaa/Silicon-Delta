@@ -7,7 +7,14 @@ import harmburger from "../../assets/AdminRegImg/hamburgermenu.svg";
 
 import "./navbar.css";
 
-function Navbar() {
+function Navbar({ onToggleAside }) {
+  const toggleDashboardDivVisibility = () => {
+    window.toggleDashboardDivVisibility();
+  };
+  // const handleClick = () => {
+  //   console.log("Hamburger menu clicked!");
+  //   onToggleAside(); // Ensure this function is being called
+  // };
   return (
     <div className="navbar flex">
       <div className="left-side">
@@ -19,9 +26,12 @@ function Navbar() {
           <img className="navIcons" src={search} alt="search icon" />
           <img className="navIcons" src={doorBell} alt="doorBell icon" />
         </div>
-        <img className="navIcons" src={userIcon} alt="user icon" />
-        <p className="name">Cynthia Damian-Ekom</p>
-        <div className="hamburger">
+        <div className="flex" onClick={toggleDashboardDivVisibility}>
+          <img className="navIcons" src={userIcon} alt="user icon" />
+          <p className="name">Cynthia Damian-Ekom</p>
+        </div>
+
+        <div className="hamburger" onClick={onToggleAside}>
           <img src={harmburger} alt="hamburger icon" />
         </div>
       </div>

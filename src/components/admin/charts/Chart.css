@@ -1,0 +1,4 @@
+.chart-container {
+  width: 100%; /* Take full width of parent container */
+  max-width: 300px; /* Limit maximum width */
+}

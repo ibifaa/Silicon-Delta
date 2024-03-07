@@ -839,15 +839,28 @@ nav .active {
   border-bottom: 1px solid #e0e0e0;
 }
 
+
 .material-table th {
   background-color: #f5f5f5;
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .material-table th,
   .material-table td {
     padding: 8px 16px;
     font-size: 14px;
   }
+
+*/
+
+.flex{
+  display: flex;
+  align-items: center;
 }
+
+.flex img{
+  margin-right: 10px;
+}
+
+

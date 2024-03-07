@@ -1,0 +1,142 @@
+const tableData = [
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+    {
+      name: "Nzurum Vanessa . C",
+      address: "Igrwuta Port Harcourt",
+      email: "Vanessanzurum@gmail.com",
+      number: "08018235501",
+    },
+  ];
+
+  export default tableData;

@@ -19,13 +19,21 @@ import CommunityManagerSmsManagement from "./pages/community-manager/CommunityMa
 import CommunityManagerEmailManagement from "./pages/community-manager/CommunityManagerEmailManagement";
 import CommunityManagerSettings from "./pages/community-manager/CommunityManagerSettings";
 
-import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminDashboard from "./pages/admin/AdminDashboard/AdminDashboard";
 import AdminRegistration from "./pages/admin/AdminReg/AdminRegistration";
-import AdminStudentRegistration from "./pages/admin/AdminStudentReg/AdminStudentRegistration";
+import AdminRegistrationForm from "./pages/admin/AdminStudentReg/AdminRegistrationForm";
 import IdCardIssuance from "./pages/admin/IdCardIsuance/IdCardIssuance";
 import AdminCoworkSpace from "./pages/admin/AdminCoworkSpace/AdminCoworkSpace";
-import AdminClassManagment from "./pages/admin/AdminClassManagement/AdminClassManagement";
+import AdminClassManagement from "./pages/admin/AdminClassManagement/AdminClassManagement";
+import AdminBiodataTable from "./pages/admin/Biodata/AdminBiodataTable";
 import TablePage from "./pages/community-manager/TablePage";
+import AdminCourseUpdate from "./pages/admin/AdminCourses/AdminCourseUpdate";
+import AdminUpdateTable from "./components/admin/adminTables/AdminUpdateTable";
+import AdminExamAndCert from "./pages/admin/AdminExamAndCertification/AdminExamAndCert";
+import CertificateIssuanceTable from "./pages/admin/AdminExamAndCertification/CertificateIssuanceTable";
+import CardIssuancePanel from "./pages/admin/IdCardIsuance/CardIssuancePanel";
+import ClassManagementPanel from "./pages/admin/AdminClassManagement/ClassManagementPanel";
+import AdminAttendanceMgtPanel from "./pages/admin/AdminClassManagement/AdminAttendanceMgtPanel";
 
 function App() {
   return (
@@ -69,15 +77,26 @@ function App() {
           element={<CommunityManagerSettings />}
         />
 
+        {/* Admin Routes */}
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
+
         <Route path="/admin/registration" element={<AdminRegistration />} />
 
         <Route
-          path="/admin/student-registration"
-          element={<AdminStudentRegistration />}
+          path="/admin/registration-form/:title"
+          element={<AdminRegistrationForm />}
         />
 
         <Route path="/admin/id-card-issuance" element={<IdCardIssuance />} />
+
+        <Route
+          path="/admin/card-issuance/:title"
+          element={<CardIssuancePanel />}
+        />
+        <Route
+          path="/admin/biodata-table/:title"
+          element={<AdminBiodataTable />}
+        />
 
         <Route
           path="/admin/cowork-space-registration"
@@ -86,9 +105,41 @@ function App() {
 
         <Route
           path="/admin/class-management"
-          element={<AdminClassManagment />}
+          element={<AdminClassManagement />}
         />
-        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+
+        <Route
+          path="/admin/class-management/:title"
+          element={<ClassManagementPanel />}
+        />
+
+        <Route
+          path="/admin/class-attendance/:title"
+          element={<AdminAttendanceMgtPanel />}
+        />
+
+        <Route
+          path="/admin/biodata-table/:title"
+          element={<AdminBiodataTable />}
+        />
+
+        <Route path="/admin/course-update" element={<AdminCourseUpdate />} />
+        <Route
+          path="/admin/course-update-table/:title"
+          element={<AdminUpdateTable />}
+        />
+
+        <Route
+          path="/admin/exam-and-certification"
+          element={<AdminExamAndCert />}
+        />
+
+        <Route
+          path="/admin/certificate-issuance/:title"
+          element={<CertificateIssuanceTable />}
+        />
+
+        {/* End of Admin Routes */}
 
         <Route
           path="/community-manager/dashboard"
