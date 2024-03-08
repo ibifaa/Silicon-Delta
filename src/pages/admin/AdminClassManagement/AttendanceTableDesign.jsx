@@ -1,4 +1,11 @@
+import { useNavigate } from "react-router-dom";
 const AttendanceTableDesign = ({ attendanceTableData }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    // Use navigate function to navigate to another route
+    navigate("/another-route");
+  };
   // Check if tableData is an array
   if (!Array.isArray(attendanceTableData)) {
     return <p>Error: tableData is not an array</p>;
@@ -20,7 +27,9 @@ const AttendanceTableDesign = ({ attendanceTableData }) => {
           {attendanceTableData.map((data, index) => (
             <tr key={index}>
               {/* Validate data properties before rendering */}
-              <td className="table-name">{data.name}</td>
+              <td className="table-name" onClick={handleClick}>
+                {data.name}
+              </td>
               <td className="table-address">{data.stack}</td>
               <td className="table-status">
                 <span

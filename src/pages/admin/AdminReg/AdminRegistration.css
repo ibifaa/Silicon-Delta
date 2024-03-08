@@ -1,50 +1,69 @@
 *{
     box-sizing: border-box;
 }
-/* .RegContent{
-    margin: auto;
-    width: 100%;
-
-} */
 
 
-.regTitle{
+
+ .AdminTitle{
     font-size: 35px;
     font-family: "Poppins";
    margin-top: 80px;
    margin-bottom: 20px;
    text-align: left;
+   /* margin-left: 50px; */
  
-}
-
-.regCardItems{
+} 
+ /* 
+.adminregCardItems{
     margin-top: 50px;
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
+     display: flex;
+     flex-wrap: wrap;
      gap: 40px;
      margin:20px auto;
-     position: relative;
+    position: relative; 
   
+} */
+
+.RegistrationItems {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+   
 }
 
-
 @media screen and (max-width:600px) {
-    .regCardItems{
+
+    .AdminRegistration{
+        margin-top: 10%;
+
+    }
+    .RegistrationItems{
         grid-template-columns: 1fr;
-        /* row-gap: 30px; */
         margin: auto;
         justify-content: center;
         align-items: center;
-        /* margin: 10px auto; */
-        width: 100%;
+        width: 80%;
+      
       
     }
 
-    .regTitle{
+    .AdminTitle{
         font-size: 30px;
-        margin: 20px 5%;
+        text-align: center;
+      
     }
 
+   
     
 
 }
+
+/* @media screen and (max-width:600px) {
+    .AdminRegistration{
+        padding-top:50px ;
+    }
+    
+} */

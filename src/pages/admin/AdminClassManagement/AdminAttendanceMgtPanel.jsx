@@ -76,7 +76,6 @@ function AdminAttendanceMgtPanel() {
                 </select>
 
                 <input type="text" placeholder="search for name of school" />
-                <div className="updatedBtn">+ Add courses</div>
               </div>
 
               <AttendanceTableDesign attendanceTableData={currentRows} />

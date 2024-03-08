@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./form.css";
+import SmallBarLayout from "../admin/SmallBarLayout";
 
 function Form() {
   const [firstName, setFirstName] = useState("");

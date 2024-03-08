@@ -1,9 +1,31 @@
 .parent{
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-  
-  
+    grid-template-columns: 18% 82%;
+    width: 100%;
 }
+
+.left{
+    background-color: #000000;
+}
+
+@media screen and (max-width:600px) {
+    .parent{
+        display: grid;
+        grid-template-columns: 100%;
+        width: 100%;
+    }
+    .left{
+        width: 0;
+    }
+    
+}
+.right{
+    background-color: #F9F9F9F9;
+    margin: auto;
+    /* width: 100%; */
+   
+}
+
 
 @media screen and(max-width:600px) {
     .parent{grid-template-columns: 1fr};
@@ -11,20 +33,7 @@
 }
 
 
-.right{
-    background-color: #F9F9F9F9;
-    grid-column: 3/-1;
-    margin: auto;
-    width:100%
-}
 
-@media screen and (max-width:600) {
-    .right{
-      
-        grid-column: 1/-1;
-        
-    }
-}
 
 
 /* Small aside layout */
@@ -43,6 +52,7 @@
 
 .smLeft{
     background-color: #000000;
+    min-height: 100vh;
 
 }
 
@@ -52,9 +62,3 @@
     width: 100%;
 }
 
-@media screen and (max-width:600) {
-    .smRight{
-      
-        
-    }
-}

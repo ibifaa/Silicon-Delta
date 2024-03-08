@@ -14,44 +14,50 @@ import AsideOption from "./AsideOption";
 
 function Aside({ visible }) {
   return (
-    <div className={`regAside ${visible ? "visible" : ""}`}>
-      <div className="top-section">
-        <Link to="/admin/dashboard" className="link">
-          {" "}
-          <AsideOption icon={dashBoardIcon} title="Dashboard" />
-        </Link>
+    <div>
+      <div className={`regAside ${visible ? "visible" : ""}`}>
+        <div className="top-section">
+          <Link to="/admin/dashboard" className="link">
+            {" "}
+            <AsideOption icon={dashBoardIcon} title="Dashboard" />
+          </Link>
 
-        <Link to="/admin/registration" className="link">
-          {" "}
-          <AsideOption icon={regIcon} title="Registration" />{" "}
-        </Link>
+          <Link to="/admin/registration" className="link">
+            {" "}
+            <AsideOption icon={regIcon} title="Registration" />{" "}
+          </Link>
 
-        <Link to="/admin/id-card-issuance" className="link">
-          {" "}
-          <AsideOption icon={idIcon} title="ID Issuance" />{" "}
-        </Link>
+          <Link to="/admin/id-card-issuance" className="link">
+            {" "}
+            <AsideOption icon={idIcon} title="ID Issuance" />{" "}
+          </Link>
 
-        <Link to="/admin/class-management" className="link">
-          {" "}
-          <AsideOption icon={classMgtIcon} title="Class management" />{" "}
-        </Link>
+          <Link to="/admin/class-management" className="link">
+            {" "}
+            <AsideOption icon={classMgtIcon} title="Class management" />{" "}
+          </Link>
 
-        <Link to="/admin/course-update" className="link">
-          {" "}
-          <AsideOption icon={courseIcon} title="Course Update" />{" "}
-        </Link>
+          <Link to="/admin/course-update" className="link">
+            {" "}
+            <AsideOption icon={courseIcon} title="Course Update" />{" "}
+          </Link>
 
-        <Link to="/admin/exam-and-certification" className="link">
-          {" "}
-          <AsideOption
-            icon={examIcon}
-            title="Examinations and certification"
-          />{" "}
-        </Link>
-      </div>
+          <Link to="/admin/exam-and-certification" className="link">
+            {" "}
+            <AsideOption
+              icon={examIcon}
+              title="Examinations and certification"
+            />{" "}
+          </Link>
+        </div>
 
-      <div className="img-section">
-        <img className="aside-footer-img" src={footerLogo} alt="company logo" />
+        <div className="img-section">
+          <img
+            className="aside-footer-img"
+            src={footerLogo}
+            alt="company log"
+          />
+        </div>
       </div>
     </div>
   );

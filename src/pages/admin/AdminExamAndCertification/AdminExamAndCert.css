@@ -37,3 +37,72 @@ select{
     justify-content:space-between;
     width: 100%;
 }
+
+/* cert */
+.cert{
+    margin: 3%;
+}
+
+/* certificatePanel */
+
+.certificate-main{
+    padding: 3%;
+    padding-top: 5%;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.cert-title-section {
+    padding: 5%;
+    text-align: center;
+    /* width: 40%; */
+}
+
+.cert-title-section h2{
+    font-size: 3rem;
+}
+
+.cert-title-section h4{
+    font-size: 1.5rem;
+}
+
+.cert-form > form input{
+    border: none;
+   background: none;
+   outline: none;
+}
+
+.cert-form {
+    width: 30%;
+    margin: auto;
+    margin-right: 50px;
+display: flex;
+justify-content: flex-end;
+flex-direction: column;
+
+
+}
+
+.cert-form form{
+    box-shadow: none;
+    border: 1px solid red;
+    padding: 0;
+   
+    border-radius: 10px;
+}
+
+.cert-form p{
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.cert-form form > button{
+ background-color: black;
+ color: black;
+ color: white;
+ padding: 8px 30px;
+ border-radius: 10px;
+}

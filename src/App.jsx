@@ -34,6 +34,8 @@ import CertificateIssuanceTable from "./pages/admin/AdminExamAndCertification/Ce
 import CardIssuancePanel from "./pages/admin/IdCardIsuance/CardIssuancePanel";
 import ClassManagementPanel from "./pages/admin/AdminClassManagement/ClassManagementPanel";
 import AdminAttendanceMgtPanel from "./pages/admin/AdminClassManagement/AdminAttendanceMgtPanel";
+import CertificateIssuancePanel from "./pages/admin/AdminExamAndCertification/CertificateIssuancePanel";
+import CertificatePanel from "./pages/admin/AdminExamAndCertification/CertificatePanel";
 
 function App() {
   return (
@@ -138,6 +140,13 @@ function App() {
           path="/admin/certificate-issuance/:title"
           element={<CertificateIssuanceTable />}
         />
+
+        <Route
+          path="/admin/certificate-form"
+          element={<CertificateIssuancePanel />}
+        />
+
+        <Route path="/admin/certificate" element={<CertificatePanel />} />
 
         {/* End of Admin Routes */}
 

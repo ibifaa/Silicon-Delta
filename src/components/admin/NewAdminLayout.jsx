@@ -18,7 +18,9 @@ function NewAdminLayout({ children }) {
       <Navbar onToggleAside={toggleAside} />
 
       <main className="parent">
-        <Aside visible={asideVisible} />
+        <div className="left">
+          <Aside visible={asideVisible} />
+        </div>
 
         <div className="right">{children}</div>
       </main>

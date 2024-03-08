@@ -46,22 +46,24 @@ function AdminRegistration() {
 
   return (
     <NewAdminLayout>
-      <h3 className="regTitle">Registration</h3>
-      <div className="regCardItems">
-        {cardOptions.map((item, index) => (
-          <Link
-            key={index}
-            to={`/admin/registration-form/${encodeURIComponent(item.title)}`}
-            className="card"
-            onClick={() => handleCardClick(item.title)}
-          >
-            <CardOption
-              icon={item.icon}
-              image={item.image}
-              title={item.title}
-            />
-          </Link>
-        ))}
+      <div className="AdminRegistration">
+        <h3 className="AdminTitle">Registration</h3>
+        <div className="RegistrationItems">
+          {cardOptions.map((item, index) => (
+            <Link
+              key={index}
+              to={`/admin/registration-form/${encodeURIComponent(item.title)}`}
+              className=""
+              onClick={() => handleCardClick(item.title)}
+            >
+              <CardOption
+                icon={item.icon}
+                image={item.image}
+                title={item.title}
+              />
+            </Link>
+          ))}
+        </div>
       </div>
     </NewAdminLayout>
   );

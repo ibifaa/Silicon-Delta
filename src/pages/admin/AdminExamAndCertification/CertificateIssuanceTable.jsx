@@ -56,9 +56,7 @@ function CertificateIssuanceTable() {
                   <option value="Marketing">Marketing</option>
                 </select>
               </form>
-              <Link
-                to={`/admin/registration-form/${encodeURIComponent(title)}`}
-              >
+              <Link to={`/admin/certificate-form`}>
                 <div className="create-icon flex">
                   <img src={certIcon} alt="icon" />
                   <p>Create Certificate</p>

@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cert-main{
+    margin: 2% auto;
+    text-align: center;
+    position: relative;
+    padding: 2%;
+    background-color: white;
+}
+
+.cert-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    
+}
+.cert-name{
+    position: relative;
+}
+.cert-name h2{
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.cert-name p{
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+  position: absolute;
+  top: 35px;
+  left: 15px;
+  font-weight: 700;
+}
+
+.certification{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.certification{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.top-img{
+    position: absolute;
+    top: 0;
+    right: -10px;
+}
+
+.bottom-img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.presentation{
+    font: 1.2rem;
+    font-weight: 500;
+}
+.holder{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 20px;
+} 
+
+.name-rule{
+    width: 70%;
+   margin: auto;
+   border: 1px solid red;
+}
+
+.text{
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+}
+
+.footer-section{
+    display: flex;
+    justify-content:space-evenly;
+    gap: 50px;
+    align-items: center;
+}
+
+.footer-section hr{
+    width: 150px;
+    border: 1px solid red;
+}
+.founder{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.founder hr{
+    margin: auto;
+}
+
+.date hr{
+    margin: auto;
+}
+
+.date{
+    text-align: center;
+}
+.founder p{
+    font-size: 8px;
+}
+
+.founder h6{
+    font-size: 1rem;
+}
