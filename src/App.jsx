@@ -19,7 +19,6 @@ import CommunityManagerSmsManagement from "./pages/community-manager/CommunityMa
 import CommunityManagerEmailManagement from "./pages/community-manager/CommunityManagerEmailManagement";
 import CommunityManagerSettings from "./pages/community-manager/CommunityManagerSettings";
 
-<<<<<<< HEAD
 import AdminDashboard from "./pages/admin/AdminDashboard/AdminDashboard";
 import AdminRegistration from "./pages/admin/AdminReg/AdminRegistration";
 import AdminRegistrationForm from "./pages/admin/AdminStudentReg/AdminRegistrationForm";
@@ -37,11 +36,6 @@ import ClassManagementPanel from "./pages/admin/AdminClassManagement/ClassManage
 import AdminAttendanceMgtPanel from "./pages/admin/AdminClassManagement/AdminAttendanceMgtPanel";
 import CertificateIssuancePanel from "./pages/admin/AdminExamAndCertification/CertificateIssuancePanel";
 import CertificatePanel from "./pages/admin/AdminExamAndCertification/CertificatePanel";
-=======
-import AdminDashboard from "./pages/admin/AdminDashboard";
-import AdminCourses from "./pages/admin/AdminCourses";
-import AdminCertications from "./pages/admin/AdminCertications";
->>>>>>> 713049f97cdb2dec480cec94ac99263d15fafbb7
 
 function App() {
   return (
