@@ -79,16 +79,10 @@ function App() {
           element={<CommunityManagerSettings />}
         />
 
-<<<<<<< HEAD
         {/* Admin Routes */}
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
 
         <Route path="/admin/registration" element={<AdminRegistration />} />
-=======
-        <Route path="/admin/dashboard" element={<AdminDashboard />} /> 
-        <Route path="/admin/exam-and-certifications" element={<AdminCertications />} /> 
-        <Route path="/admin/courses" element={<AdminCourses />} /> 
->>>>>>> 713049f97cdb2dec480cec94ac99263d15fafbb7
 
         <Route
           path="/admin/registration-form/:title"
