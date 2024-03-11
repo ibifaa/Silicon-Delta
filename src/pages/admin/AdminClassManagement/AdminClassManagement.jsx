@@ -63,7 +63,7 @@ function AdminClassManagement() {
                 ? `/admin/class-attendance/${encodeURIComponent(item.title)}`
                 : ""
             }
-            className="card"
+            className=""
             onClick={() => handleCardClick(item.title)}
           >
             <CardOption

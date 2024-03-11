@@ -87,11 +87,11 @@ main{
 }
 
 .circle1, .red{
-    background: #CA0E0E;
+    /* background: #CA0E0E; */
 }
 
  .red{
-    background: #F5C4C4;
+    /* background: #F5C4C4; */
 
     color: #CA0E0E;
     };

@@ -7,10 +7,11 @@ import idIcon from "../../assets/AdminRegImg/idIcon.svg";
 import courseIcon from "../../assets/AdminRegImg/courseIcon.svg";
 import examIcon from "../../assets/AdminRegImg/Exam.svg";
 import SmallAsideOption from "./SmallAsideOption";
+import "./SmallAside.css";
 
-function smallAside() {
+function SmallAside({ visible }) {
   return (
-    <div className="smAside">
+    <div className={`smAside ${visible ? "visible" : ""}`}>
       <div className="sm-section flex">
         <Link to="/admin/dashboard" className="link">
           {" "}
@@ -46,4 +47,4 @@ function smallAside() {
   );
 }
 
-export default smallAside;
+export default SmallAside;

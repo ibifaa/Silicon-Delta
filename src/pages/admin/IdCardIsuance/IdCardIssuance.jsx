@@ -54,7 +54,7 @@ function IdCardIssuance() {
           <Link
             key={index}
             to={`/admin/card-issuance/${encodeURIComponent(item.title)}`}
-            className="card"
+            className=""
             onClick={() => handleCardClick(item.title)}
           >
             <CardOption

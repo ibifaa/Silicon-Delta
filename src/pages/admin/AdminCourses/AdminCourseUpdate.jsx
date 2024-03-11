@@ -38,13 +38,13 @@ function AdminCourseUpdate() {
 
   return (
     <NewAdminLayout>
-      <h3 className="regTitle">Course Update</h3>
+      <h3 className="courseTitle">Course Update</h3>
       <div className="courseItems flex">
         {cardOptions.map((item, index) => (
           <Link
             key={index}
             to={`/admin/course-update-table/${encodeURIComponent(item.title)}`}
-            className="card"
+            className=""
             onClick={() => handleCardClick(item.title)}
           >
             <CardOption

@@ -26,39 +26,12 @@
    
 }
 
-
+/* 
 @media screen and(max-width:600px) {
     .parent{grid-template-columns: 1fr};
     
-}
+} */
 
 
 
-
-
-/* Small aside layout */
-
-.smParent{
-    display: grid;
-    grid-template-columns: 5% 95%
-  
-  
-}
-
-@media screen and(max-width:600px) {
-    .parent{grid-template-columns: 1fr};
-    
-}
-
-.smLeft{
-    background-color: #000000;
-    min-height: 100vh;
-
-}
-
-.smRight{
-    background-color: #F9F9F9F9;
-    margin: auto;
-    width: 100%;
-}
 

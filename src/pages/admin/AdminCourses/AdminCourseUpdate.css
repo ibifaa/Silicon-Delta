@@ -3,5 +3,21 @@
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+    margin-top: 5%;
 
 }
+
+.courseTitle{
+    
+    font-size: 35px;
+    margin-left: 5%;
+    margin-top: 80px;
+}
+
+@media screen and (max-width:600px) {
+    .courseTitle{
+        font-size: 30px;
+        text-align: center;
+    }
+}
+

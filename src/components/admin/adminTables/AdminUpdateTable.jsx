@@ -10,6 +10,7 @@ import arrowLeft from "../../../assets/arrow-left.svg";
 import updateTableData from "../../../components/admin/adminTables/priceAndCourseData";
 import "./AdminUpdateTable.css";
 import PriceAndUpdate from "../../../components/admin/adminTables/PriceAndUpdate";
+import SmallBarLayout from "../SmallBarLayout";
 
 function AdminUpdateTable() {
   let { title } = useParams();
@@ -35,60 +36,52 @@ function AdminUpdateTable() {
 
   console.log(title);
   return (
-    <div>
-      <div className="asr-navbar">
-        <Navbar />
-      </div>
-
-      <div className="asr-content flex">
-        <SmallAside />
-
-        <main className="tableComp flex">
-          <div className="tableTitle">
-            <h4 className="school">{title}</h4>
-            <div className="flex priceDiv">
-              <p>Course Update and Pricing</p>
-              <div className="updatedBtn">+ Add courses</div>
-            </div>
-
-            <PriceAndUpdate updateTableData={currentRows} />
+    <SmallBarLayout>
+      <main className="tableComp flex">
+        <div className="tableTitle">
+          <h4 className="school">{title}</h4>
+          <div className="flex priceDiv">
+            <p>Course Update and Pricing</p>
+            <div className="updatedBtn">+ Add courses</div>
           </div>
-          <div className="pagination-controls">
-            <div className="pagination-dropdown">
-              <label>Show</label>
-              <div>
-                <select
-                  value={rowsPerPage}
-                  onChange={(e) => handleRowsPerPageChange(e.target.value)}
-                >
-                  <option value={5}>5 rows</option>
-                  <option value={10}>10 rows</option>
-                  <option value={15}>15 rows</option>
-                  <option value={20}>20 rows</option>
-                </select>
-              </div>
-              <label>Per page</label>
-            </div>
 
-            <div className="pagination-btns">
-              <button
-                disabled={currentPage === 1}
-                onClick={() => handlePageChange(currentPage - 1)}
+          <PriceAndUpdate updateTableData={currentRows} />
+        </div>
+        <div className="pagination-controls">
+          <div className="pagination-dropdown">
+            <label>Show</label>
+            <div>
+              <select
+                value={rowsPerPage}
+                onChange={(e) => handleRowsPerPageChange(e.target.value)}
               >
-                <img src={arrowLeft} alt="arrow left" />
-              </button>
-              <span>{`Page 0${currentPage} of 0${totalPages}`}</span>
-              <button
-                disabled={currentPage === totalPages}
-                onClick={() => handlePageChange(currentPage + 1)}
-              >
-                <img src={arrowRight} alt="arrow right" />
-              </button>
+                <option value={5}>5 rows</option>
+                <option value={10}>10 rows</option>
+                <option value={15}>15 rows</option>
+                <option value={20}>20 rows</option>
+              </select>
             </div>
+            <label>Per page</label>
           </div>
-        </main>
-      </div>
-    </div>
+
+          <div className="pagination-btns">
+            <button
+              disabled={currentPage === 1}
+              onClick={() => handlePageChange(currentPage - 1)}
+            >
+              <img src={arrowLeft} alt="arrow left" />
+            </button>
+            <span>{`Page 0${currentPage} of 0${totalPages}`}</span>
+            <button
+              disabled={currentPage === totalPages}
+              onClick={() => handlePageChange(currentPage + 1)}
+            >
+              <img src={arrowRight} alt="arrow right" />
+            </button>
+          </div>
+        </div>
+      </main>
+    </SmallBarLayout>
   );
 }
 

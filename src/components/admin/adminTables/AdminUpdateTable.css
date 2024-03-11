@@ -2,10 +2,18 @@
     justify-content: space-between;
 }
 
+.updateTable{
+    width: 100%;
+}
+
 .updatedBtn{
     background-color: #7C7474;
     color:white;
     text-align: center;
     border-radius: 10px;
     padding: 5px 10px;
+}
+
+.tableComp{
+    width: 100%;
 }

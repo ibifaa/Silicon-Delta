@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "@mui/material";
 import Navbar from "../navbar/Navbar";
 import SmallAside from "../aside/SmallAside";
-import "./NewAdminLayout.css";
+import "./SmallBarLayout.css";
 
 function SmallBarLayout({ children }) {
   const isMobile = useMediaQuery("(max-width:600px)");
@@ -19,7 +19,7 @@ function SmallBarLayout({ children }) {
 
       <main className="smParent">
         <div className="smLeft">
-          <SmallAside />
+          <SmallAside visible={asideVisible} />
         </div>
 
         <div className="smRight">{children}</div>
