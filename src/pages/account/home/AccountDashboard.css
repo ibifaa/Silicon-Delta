@@ -1,0 +1,38 @@
+.chart-items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width:600px) {
+    .chart-items{
+       
+        grid-template-columns: 1fr;
+    }
+}
+.month-summary{
+    justify-content: left;
+    gap: 20px;
+}
+
+.account-main{
+    margin: 5%;
+}
+
+@media screen and (max-width:600px) {
+    .account-main{
+        margin: 1%;
+    }
+    
+}
+
+.chart{
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.boxes{
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
+    padding: 2px 5px;
+    margin: 10px;
+}

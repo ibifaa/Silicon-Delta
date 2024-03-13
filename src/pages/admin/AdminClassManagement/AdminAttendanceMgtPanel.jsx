@@ -37,7 +37,7 @@ function AdminAttendanceMgtPanel() {
     setCurrentPage(1); // Reset to the first page when changing rows per page
   };
 
-  console.log(title);
+
   return (
     <SmallBarLayout>
       <div>

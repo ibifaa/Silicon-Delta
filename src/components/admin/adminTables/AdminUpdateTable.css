@@ -17,3 +17,9 @@
 .tableComp{
     width: 100%;
 }
+
+/* Course Table */
+.courseTable{
+    background-color: green;
+    width: 90%;
+}

@@ -37,11 +37,17 @@ import AdminAttendanceMgtPanel from "./pages/admin/AdminClassManagement/AdminAtt
 import CertificateIssuancePanel from "./pages/admin/AdminExamAndCertification/CertificateIssuancePanel";
 import CertificatePanel from "./pages/admin/AdminExamAndCertification/CertificatePanel";
 
+import AccountDashboard from "./pages/account/home/AccountDashboard";
+import Fees from "./pages/account/fees/Fees";
+import TablePanel from "./pages/account/fees/TablePanel";
+import Register from "./pages/Register";
+
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<Home />} />
 
@@ -185,6 +191,12 @@ function App() {
           path="/community-manager/settings"
           element={<CommunityManagerSettings />}
         />
+
+        {/* Account Routes */}
+
+        <Route path="/account/dashboard" element={<AccountDashboard />} />
+        <Route path="/account/fees" element={<Fees />} />
+        <Route path="/account/fees/:title" element={<TablePanel />} />
 
         {/* others */}
         <Route path="/*" element={<NotFound />} />

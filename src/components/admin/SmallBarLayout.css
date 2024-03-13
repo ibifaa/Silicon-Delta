@@ -6,22 +6,28 @@
     grid-template-columns: 5% 95%
 }
 
+.smRight{
+    background-color: #F9F9F9F9;
+    width: 95%;
+}
+.smLeft{
+    width: 5%;
+}
+
+
+
+
 @media screen and(max-width:600px) {
     .smParent{
         grid-template-columns: 100%;
         width: 100%
     };
+
+    .smLeft{
+        width: 0;
+       
+       }
     
 }
 
-.smLeft{
- width: 0;
-
-}
-
-.smRight{
-    background-color: #F9F9F9F9;
-    margin: auto;
-    /* width: 100%; */
-}
 

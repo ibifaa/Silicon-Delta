@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./form.css";
 
 function CertificateForm() {
-  const [fullName, setFullName] = useState("");
-  const [stack, setStack] = useState("");
-  const [duration, setDuration] = useState("");
-  const [dateIssued, setDateIssued] = useState("");
-  const [founderName, setFounderName] = useState("");
-
+  const [form, setForm] = useState({
+    fullname: "",
+    stack: "",
+    duration: "",
+    dateIssued: "",
+    founderName: "",
+  });
   // Function to handle school selection
 
   const handleSubmit = (e) => {
@@ -37,39 +38,64 @@ function CertificateForm() {
           <input
             type="text"
             placeholder="Student's full name"
-            value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
+            value={form.fullName}
+            onChange={(e) =>
+              setForm({
+                ...form,
+                fullname: e.target.value,
+              })
+            }
             required
           />
 
           <input
             type="text"
-            value={stack}
-            onChange={(e) => setStack(e.target.value)}
+            value={form.stack}
+            onChange={(e) =>
+              setForm({
+                ...form,
+                stack: e.target.value,
+              })
+            }
             placeholder="Stack"
             required
           />
 
           <input
             type="text"
-            value={duration}
-            onChange={(e) => setDuration(e.target.value)}
+            value={form.duration}
+            onChange={(e) =>
+              setForm({
+                ...form,
+                duration: e.target.value,
+              })
+            }
             placeholder="Duration"
             required
           />
 
           <input
             type="text"
-            value={dateIssued}
-            onChange={(e) => setDateIssued(e.target.value)}
-            placeholder="Phone number"
+            value={form.dateIssued}
+            onChange={(e) =>
+              setForm({
+                ...form,
+                dateIssued: e.target.value,
+              })
+            }
+            placeholder="Date Issued"
             required
           />
 
           <input
             type="text"
-            value={founderName}
-            onChange={(e) => setFounderName(e.target.value)}
+            value={form.founderName}
+            onChange={(e) =>
+              setForm({
+                ...form,
+                founderName: e.target.value,
+              })
+            }
             placeholder="Founder's Name"
             required
           />

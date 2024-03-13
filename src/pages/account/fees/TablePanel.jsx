@@ -1,28 +1,31 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import html2pdf from "html2pdf.js";
+import * as XLSX from "xlsx";
+import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
-import Navbar from "../../../components/navbar/Navbar";
-import SmallAside from "../../../components/aside/SmallAside";
+
+import DownloadCard from "../../../components/admin/DownloadCard/DownloadCard";
 
 import arrowRight from "../../../assets/arrow-right.svg";
 import arrowLeft from "../../../assets/arrow-left.svg";
 
-import updateTableData from "../../../components/admin/adminTables/priceAndCourseData";
-import "./AdminUpdateTable.css";
-import PriceAndUpdate from "../../../components/admin/adminTables/PriceAndUpdate";
-import SmallBarLayout from "../SmallBarLayout";
+import feesData from "./feesData";
 
-function AdminUpdateTable() {
+import certIcon from "../../../assets/AdminRegImg/cert.svg";
+import SmallBarLayout from "../../../components/admin/SmallBarLayout";
+import TableDesign from "./TableDesign";
+
+function TablePanel() {
   let { title } = useParams();
 
   const [currentPage, setCurrentPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(10); // Default rows per page
-  const totalRows = updateTableData.length;
+  const totalRows = feesData.length;
   const totalPages = Math.ceil(totalRows / rowsPerPage);
 
   const indexOfLastRow = currentPage * rowsPerPage;
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
-  const currentRows = updateTableData.slice(indexOfFirstRow, indexOfLastRow);
+  const currentRows = feesData.slice(indexOfFirstRow, indexOfLastRow);
 
   // Pagination controls
   const handlePageChange = (page) => {
@@ -34,19 +37,34 @@ function AdminUpdateTable() {
     setCurrentPage(1); // Reset to the first page when changing rows per page
   };
 
-  console.log(title);
+  const handleDownload = () => {
+    const element = document.getElementById("pageContent");
+    return <DownloadCard contentId="pageContent" />;
+  };
+
   return (
     <SmallBarLayout>
-      <div className="courseTable">
+      <div className="certificateTableMain " id="pageContent">
         <main className="tableComp flex">
           <div className="tableTitle">
-            <h4 className="school">{title}</h4>
-            <div className="flex priceDiv">
-              <p>Course Update and Pricing</p>
-              <div className="updatedBtn">+ Add courses</div>
+            <p className="school">{title}</p>
+            <div className="flex">
+              <p>Schedule of total income</p>
+              <button>Summary</button>
             </div>
 
-            <PriceAndUpdate updateTableData={currentRows} />
+            <div className="flex sub-nav">
+              <div></div>
+
+              {/* <Link to={`/admin/certificate-form`}> */}
+              <div className="create-icon flex">
+                <img src={certIcon} alt="icon" />
+                <p onClick={handleDownload}>Download File</p>
+              </div>
+              {/* </Link> */}
+            </div>
+
+            <TableDesign feesData={currentRows} />
           </div>
           <div className="pagination-controls">
             <div className="pagination-dropdown">
@@ -87,4 +105,4 @@ function AdminUpdateTable() {
   );
 }
 
-export default AdminUpdateTable;
+export default TablePanel;

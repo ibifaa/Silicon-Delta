@@ -12,6 +12,7 @@ import certificateData from "./certificateData";
 import CertificateTableStructure from "./CertificateTableStructure";
 
 import certIcon from "../../../assets/AdminRegImg/cert.svg";
+import SmallBarLayout from "../../../components/admin/SmallBarLayout";
 
 function CertificateIssuanceTable() {
   let { title } = useParams();
@@ -35,16 +36,9 @@ function CertificateIssuanceTable() {
     setCurrentPage(1); // Reset to the first page when changing rows per page
   };
 
-  console.log(title);
   return (
-    <div>
-      <div className="asr-navbar">
-        <Navbar />
-      </div>
-
-      <div className="asr-content flex">
-        <SmallAside />
-
+    <SmallBarLayout>
+      <div className="certificateTableMain">
         <main className="tableComp flex">
           <div className="tableTitle">
             <p className="school">{title}</p>
@@ -101,7 +95,7 @@ function CertificateIssuanceTable() {
           </div>
         </main>
       </div>
-    </div>
+    </SmallBarLayout>
   );
 }
 
